@@ -9,10 +9,13 @@ const configCatClient = configcat.getClient('configcat-sdk-1/tP3YCDSlzUeMVb36fHm
     logger: configcat.createConsoleLogger(configcat.LogLevel.Debug)
   });
 
-export const getFlag = async (flag: string) =>
+export const getFlag = async (flag: string) =>{
   await configCatClient.getValueAsync(flag, false);
+  configCatClient.forceRefreshAsync();
+}
 
 export const getFlags = async () => {
+  configCatClient.forceRefreshAsync();
   const response = await configCatClient.getAllValuesAsync();
   return response.map(({ settingKey, settingValue }) => ({ settingKey, settingValue }));
 };
