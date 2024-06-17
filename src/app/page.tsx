@@ -1,9 +1,10 @@
 'use client';
 
-import Image from "next/image";
 import styles from "./page.module.css";
 
 import { useFeatureFlag } from './_components/useFeatureFlag';
+
+export const fetchCache = 'force-no-store';
 
 export default function Home() {
   const visible = useFeatureFlag('isAwesomeFeatureEnabled');

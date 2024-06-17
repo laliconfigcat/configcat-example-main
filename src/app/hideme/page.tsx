@@ -1,14 +1,17 @@
 import React from 'react';
-import { notFound } from "next/navigation";
 
 import { getFlag } from "../../services";
 
 export default async function Toggle() {
-  const visible = await getFlag('someflag');
+  const visible = getFlag('isAwesomeFeatureEnabled');
 
-  if (!visible) notFound();
-
+  if (!visible)
   return (
-    <h1>Toggle me with a flag</h1>
+    <h1>Toggle me with a flag - not visible</h1>
   )
+  else{
+    return (
+      <h1>Toggle me with a flag - visible</h1>
+    ) 
+  }
 }
