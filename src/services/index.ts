@@ -1,7 +1,7 @@
 import * as configcat from 'configcat-js-ssr';
 
 export const fetchCache = 'force-no-store';
-export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 const configCatClient = configcat.getClient('configcat-sdk-1/tP3YCDSlzUeMVb36fHm4Fw/MehpaJ_x1UakimZRkRlvsA', configcat.PollingMode.AutoPoll,
   {
