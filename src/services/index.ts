@@ -1,5 +1,7 @@
 import * as configcat from 'configcat-js-ssr';
 
+export const fetchCache = 'force-no-store';
+
 const configCatClient = configcat.getClient('configcat-sdk-1/tP3YCDSlzUeMVb36fHm4Fw/MehpaJ_x1UakimZRkRlvsA', configcat.PollingMode.AutoPoll,
   {
     pollIntervalSeconds: 5,
