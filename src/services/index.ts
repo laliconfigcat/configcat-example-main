@@ -5,7 +5,7 @@ export const revalidate = 0;
 
 const configCatClient = configcat.getClient('configcat-sdk-1/tP3YCDSlzUeMVb36fHm4Fw/MehpaJ_x1UakimZRkRlvsA', configcat.PollingMode.AutoPoll,
   {
-    pollIntervalSeconds: 5,
+    pollIntervalSeconds: 2,
     logger: configcat.createConsoleLogger(configcat.LogLevel.Debug)
   });
 
